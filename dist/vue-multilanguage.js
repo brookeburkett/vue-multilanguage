@@ -164,7 +164,10 @@ MultiLanguage.install = function(Vue, languages){
     methods: {
       translate(path, params = {}) {          
         let result = ''
-      
+        if(typeof path == "undefined") {
+          console.log("undefined path");
+          return "[UNDEFINED PATH]";
+        }
         if (this.$options.messages && this.$options.messages[ this.language ])
           result = multi.search(this.$options.messages[ this.language ], path, params)
         
