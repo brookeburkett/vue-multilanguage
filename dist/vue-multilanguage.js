@@ -175,7 +175,7 @@ MultiLanguage.install = function(Vue, languages){
           result = multi.search(multi.languages[ this.language ], path, params)
         
         if(typeof result == "undefined") {
-          console.log("TODO: ", path);
+          console.log(`"${path}": "${path}"`);
           return "["+path+"]"
         }
         return result
